@@ -11,7 +11,166 @@
     <link rel="stylesheet" href="./style.css">
   </head>
   <body>
-    <h1>HTML Form</h1>
+    <form action="http://localhost:8080"method="post">
+      <fieldset class="block">
+        <legend class="nameblock">Personal information</legend>
+        <label class="stringdate">
+          Surname:
+          <input
+          type="text"
+          name="surname"
+          autocomplete="off"
+          required>
+        </label>
+        <label class="stringdate">
+          Name:
+          <input
+          type="text"
+          name="name"
+          autocomplete="off"
+          required>
+        </label>
+
+        <label class="stringdate">
+          How old are You?
+          <input
+          type="number"
+          name="age"
+          min="1"
+          max="100"
+          value="12"
+          required>
+        </label>
+        <label class="stringdate">
+          Full date of birth:
+          <input
+          type="date"
+          name="datebirth"
+          required>
+        </label>
+        <label class="stringdate">
+         I accept the term of the agreement
+          <input
+          type="checkbox"
+          name="surname"
+          required>
+        </label>
+      </fieldset>
+
+      <fieldset class="block">
+        <legend class="nameblock">Registration</legend>
+        <label class="stringdate">
+          E-mail:
+          <input
+          type="email"
+          name="email"
+          placeholder="email@example.com"
+          required>
+        </label>
+        <label class="stringdate">
+          Password:
+          <input
+          type="password"
+          name="password"
+          minlength="6"
+          maxlength="12"
+          required>
+        </label>
+      </fieldset>
+
+      <fieldset class="block">
+        <legend class="nameblock">An interesting fact about you!</legend>
+        <div class="choose">
+          Do you love cats?
+          <label class="stringdate">
+            <input
+            type="radio"
+            name="lovecats"
+            value="Yes">
+            Yes
+          </label>
+          <label class="stringdate">
+            <input
+            type="radio"
+            name="lovecats"
+            value="No">
+            No
+          </label>
+        </div>
+        <label class="stringdate">
+          What is your favorite color?
+          <input
+          type="color"
+          name="color"
+          required>
+        </label>
+        <label class="stringdate">
+          What time do you go to bed?
+          <input
+          type="time"
+          name="timesleep"
+          required>
+        </label>
+        <label class="stringdate">
+          What are your favorite brand of cars?
+          <select
+          name="brandcar"
+          required
+          multiple>
+            <option value="BMV">BMV</option>
+            <option value="Audi">Audi</option>
+            <option value="Lada">Lada</option>
+            <option
+            value=" "
+            disabled
+            selected>
+            </option>
+          </select>
+        </label>
+        <label class="stringdate">
+         How do you rate our work?
+          <input
+          type="range"
+          name="rate"
+          min="0"
+          max="10"
+          value="0"
+          required>
+        </label>
+      </fieldset>
+
+      <fieldset class="block">
+        <legend class="nameblock">Additional info</legend>
+        <label class="stringdate">
+          Comments:
+          <textarea
+          name="comments"
+          placeholder="Your comments"
+         ></textarea>
+        </label>
+
+        <label class="stringdate">
+          Would you recommend us?
+          <select
+          name="recomendus"
+          required>
+            <option
+            value="yes"
+            selected>
+            yes
+            </option>
+            <option value="no">
+              no
+            </option>
+          </select>
+        </label>
+      </fieldset>
+      <button
+      type="submit"
+      class="submit">
+      Submit
+      </button>
+    </form>
     <script type="text/javascript" src="./main.js"></script>
   </body>
 </html>
